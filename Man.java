@@ -6,8 +6,8 @@ public class Man {
 		ma = 4;
 		var myNum = 5.99;
 		int boy = 11;
-		double boy2 = (double) femboy;
-		System.out.println(femboy2);
+		double boy2 = (double) boy;
+		System.out.println(boy2);
 		System.out.println(myNum);
 		boolean isTrue = true;
 		System.out.println(isTrue); 
