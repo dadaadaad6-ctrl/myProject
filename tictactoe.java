@@ -1,15 +1,25 @@
 public class tictactoe {
+	static int arg1;
 	public static void main(String[] args) {
 		if (args.length == 0) {
-		 System.out.println("Hello, welcome to rock paper scissors game by Werz, please insert 1 as arg for rock, 2 for paper, 3 for scissors.");
+		 System.out.println("Hello, welcome to rock paper scissors game by Werz, please insert rock as arg for rock, paper for paper, scissors for scissors.");
 		 return; }
-		int arg1 = Integer.parseInt(args[0]);
-		if (args.length == 1 && arg1 > 0 && arg1 < 4) {
-			game(arg1);
-		}
-		else {
+		String laugh = args[0];
+		if (laugh.length() < 2) {
 			System.out.println("Wrong way");
+			return;
 		}
+		String answer = laugh.substring(0,1).toUpperCase() + laugh.substring(1);
+		if ("Scissors".equals(answer))	 {
+			arg1 = 3;
+		} else if ("Paper".equals(answer)) {
+			arg1 = 2; 
+		} else if ("Rock".equals(answer)) {
+			arg1 = 1; }
+		  else {
+			  System.out.println("Wrong way");
+		  }
+		game(arg1);
 
 	}
 	public static void game(int arg) {
